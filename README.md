@@ -1,21 +1,21 @@
 # vue_shop
 
-## Project setup
+## 项目设置
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 编译并重新加载以进行开发
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 为生产而编译和缩小
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Lints和fixes文件
 ```
 npm run lint
 ```
