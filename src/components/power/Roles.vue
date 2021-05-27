@@ -142,9 +142,9 @@ export default {
       },
       // 控制编辑角色对话框的显示和隐藏
       editRoleDialogVisible: false,
-      // 添加角色的表单数据
+      // 编辑角色的表单数据
       editRoleForm: {},
-      // 添加角色表单的验证规则对象
+      // 编辑角色表单的验证规则对象
       editRoleFormRules: {
         roleName: [
           { required: true, message: '请输入角色名称', trigger: 'blur' }
@@ -276,7 +276,7 @@ export default {
         return this.$message.error('查询角色数据失败')
       }
       this.editRoleForm = res.data
-      console.log(this.editRoleForm)
+      // console.log(this.editRoleForm)
       this.editRoleDialogVisible = true
     },
     // 编辑角色信息并提交
