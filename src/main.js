@@ -14,11 +14,23 @@ import 'quill/dist/quill.core.css'
 import 'quill/dist/quill.snow.css'
 import 'quill/dist/quill.bubble.css'
 
+// 导入加载进度条包
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
+
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+// 在request 拦截其中，展示进度条NProgress.start()
 axios.interceptors.request.use(config => {
+  NProgress.start()
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
 })
+// 在response 拦截其中，隐藏NProgress.done()
+axios.interceptors.response.use(config => {
+  NProgress.done()
+  return config
+})
+
 Vue.prototype.$http = axios
 
 Vue.config.productionTip = false

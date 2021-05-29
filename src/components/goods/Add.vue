@@ -157,11 +157,9 @@ export default {
       }
       // 把数据列表，赋值给catelist
       this.catelist = res.data
-      // console.log(this.catelist)
     },
     // 级联选择器选中项变化，会触发这个函数
     handleChange () {
-      console.log(this.addForm.goods_cat)
       if (this.addForm.goods_cat.length !== 3) {
         this.addForm.goods_cat = []
       }
@@ -173,7 +171,6 @@ export default {
       }
     },
     async tabClicked () {
-      // console.log(this.activeIndex)
       // 证明访问的是动态参数
       if (this.activeIndex === '1') {
         const { data: res } = await this.$http.get(
@@ -190,7 +187,6 @@ export default {
           item.attr_vals = item.attr_vals.length === 0 ? [] : item.attr_vals.split(' ')
         })
         this.manyTableData = res.data
-        console.log(res.data)
       } else if (this.activeIndex === '2') {
         const { data: res } = await this.$http.get(
           `categories/${this.cateId}/attributes`,
@@ -202,7 +198,6 @@ export default {
         if (res.meta.status !== 200) {
           return this.$message.error('获取静态属性列表失败！')
         }
-        console.log(res.data)
         this.onlyTableData = res.data
       }
     },

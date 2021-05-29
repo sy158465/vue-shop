@@ -229,7 +229,6 @@ export default {
         return this.$message.error('获取参数列表失败！')
       }
 
-      console.log(res.data)
       res.data.forEach(item => {
         item.attr_vals = item.attr_vals ? item.attr_vals.split(' ') : []
         // 控制文本框的显示与隐藏

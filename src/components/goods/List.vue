@@ -125,7 +125,6 @@ export default {
       this.$message.success('获取商品列表成功')
       this.goodslist = res.data.goods
       this.total = res.data.total
-      console.log(this.goodslist)
     },
     handleSizeChange (newSize) {
       this.queryInfo.pagesize = newSize
@@ -166,7 +165,6 @@ export default {
         return this.$message.error('查询失败')
       }
       this.editForm = res.data
-      console.log(this.editForm)
       this.editDialogVisible = true
     },
     // 监听编辑对话框的关闭事件
