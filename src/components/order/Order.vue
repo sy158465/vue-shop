@@ -132,7 +132,7 @@ export default {
       this.$message.success('获取商品列表成功')
       this.orderlist = res.data.goods
       this.total = res.data.total
-      console.log(this.orderlist)
+      // console.log(this.orderlist)
     },
     handleSizeChange (newSize) {
       this.queryInfo.pagesize = newSize
