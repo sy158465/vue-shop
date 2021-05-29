@@ -27,17 +27,21 @@ Vue.component('tree-table', TreeTable)
 // 将富文本编辑器注册为全局可用组件
 Vue.use(VueQuillEditor)
 
+// 定义全局时间过滤器
 Vue.filter('dateFormat', function (originVal) {
-  const dt = new Date(originVal)
+  const dt = new Date(originVal * 1000)
+
   const y = dt.getFullYear()
   const m = (dt.getMonth() + 1 + '').padStart(2, '0')
   const d = (dt.getDate() + '').padStart(2, '0')
 
   const hh = (dt.getHours() + '').padStart(2, '0')
   const mm = (dt.getMinutes() + '').padStart(2, '0')
-  const ss = (dt.getSeconds() + '').padStart(2, '0')
+  const ss = (dt.getMilliseconds() + '').padStart(2, '0')
 
-  return `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+  const DateStr = `${y}-${m}-${d} ${hh}:${mm}:${ss}`
+
+  return DateStr
 })
 new Vue({
   router,
