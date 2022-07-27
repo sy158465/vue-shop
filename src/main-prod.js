@@ -12,7 +12,7 @@ import VueQuillEditor from 'vue-quill-editor'
 // 导入加载进度条包
 import NProgress from 'nprogress'
 
-axios.defaults.baseURL = 'http://timemeetyou.com:8889/api/private/v1/'
+axios.defaults.baseURL = 'https://lianghj.top:8888/api/private/v1/'
 // 在request 拦截其中，展示进度条NProgress.start()
 axios.interceptors.request.use(config => {
   NProgress.start()
