@@ -1,5 +1,3 @@
-# vue_shop
-
 ## 项目设置
 ```
 npm install
@@ -19,6 +17,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
